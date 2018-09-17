@@ -12,6 +12,6 @@ public class App
     public static void main( String[] args )
     {
         Logger log = LoggerFactory.getLogger(App.class);
-        log.info("Hola Mundo!");
+        log.info("Hola Mundo!!!!");
     }
 }
