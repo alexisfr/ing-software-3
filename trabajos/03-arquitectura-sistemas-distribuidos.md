@@ -1,4 +1,4 @@
-## Trabajo Práctico 3 - Arquitectura de Systema Distribuidos
+## Trabajo Práctico 3 - Arquitectura de Sistemas Distribuidos
 
 ### 1- Objetivos de Aprendizaje
  - Familiarizarse con conceptos de Sistemas Distribuidos
