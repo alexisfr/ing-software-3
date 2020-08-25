@@ -47,7 +47,7 @@ Si nuestro sistem distribuido esta compuesto de varios componentes corriendo con
    ```
   - Levantar una aplicacion web, que utilice esta base de datos
   ```bash
-    docker run -d --net mybridge -e REDIS_HOST=db -REDIS_PORT=6379 -p 5000:5000 --name web alexisfr/flask-app:latest
+    docker run -d --net mybridge -e REDIS_HOST=db -e REDIS_PORT=6379 -p 5000:5000 --name web alexisfr/flask-app:latest
   ```
   - Abrir un navegador y acceder a la URL: http://localhost:5000/
   - Verificar el estado de los contenedores y redes en Docker, describir:
