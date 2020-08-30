@@ -219,9 +219,9 @@ java -jar target\ejemplo-uber-jar.jar
   - Importar el proyecto anterior en Eclipse o Intellij como maven project:
     - Si no dispone de Eclipse puede obtenerlo desde este link http://www.eclipse.org/downloads/packages/release/2018-09/r/eclipse-ide-java-ee-developers
     - Para importar, ir al menú Archivo -> Importar -> Maven -> Proyecto Maven Existente:
-![alt text](imagenes/import-existing-maven.png)
+![alt text](./import-existing-maven.png)
     - Seleccionar el directorio donde se encuentra el pom.xml que se generó en el punto anterior. Luego continuar:
-![alt text](imagenes/path-to-pom.png)
+![alt text](./path-to-pom.png)
 
   - Familiarizarse con la interfaz grafica
     - Ejecutar la aplicación
@@ -260,7 +260,25 @@ npm start
 
 
 #### 9- Ejemplo con python
-TBD
+- Instalar dependencias (Ejemplo Ubuntu) varía según el OS:
+```
+sudo apt install build-essential python3-dev
+pip3 install cookiecutter
+```
+- Correr el scaffold
+```bash
+$ cookiecutter https://github.com/candidtim/cookiecutter-flask-minimal.git
+application_name [Your Application]: test
+package_name [yourapplication]: test
+$
+```
+- Ejecutar la aplicación
+```bash
+cd test
+make run
+```
+- Acceder a la aplicación en: http://localhost:5000/
+- Explicar que hace un atook como cookiecutter, make y pip.
 
 #### 10- Build tools para otros lenguajes
 - Hacer una lista de herramientas de build (una o varias) para distintos lenguajes, por ejemplo (Rust -> cargo)

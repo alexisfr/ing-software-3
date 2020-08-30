@@ -25,7 +25,7 @@ Una arquitectura de microservicios consta de una colección de servicios autóno
 
 [imagen]: microservices-logical.png
 
-(Imagen: https://docs.microsoft.com/es-es/azure/architecture/microservices/ )
+(Contenido e Imagen: https://docs.microsoft.com/es-es/azure/architecture/microservices/ )
 
 #### Administración e implementación.
  Este componente es el responsable de la colocación de servicios en los nodos, la identificación de errores, el reequilibrio de servicios entre nodos, etc. Normalmente, este componente es una tecnología estándar, como Kubernetes, en lugar de algo creado de forma personalizada.
