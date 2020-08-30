@@ -8,4 +8,8 @@ Repositorio Git de Ingeniería del Software 3 - Año 2020
 
   * [Trabajo Práctico 2 - Introducción a Docker](trabajos/02-introduccion-docker.md)
   
-  * [Trabajo Práctico 3 - Arquitectura de sistemas distribuilos](trabajos/03-arquitectura-sistemas-distribuidos.md)
+  * [Trabajo Práctico 3 - Arquitectura de sistemas distribuidos](trabajos/03-arquitectura-sistemas-distribuidos.md)
+
+  * [Trabajo Práctico 4 - Arquitectura de Microservicios](trabajos/04-arquitectura-microservicios.md)
+
+  * [Trabajo Práctico 5 - Herramientas de construcción de software](trabajos/herramientas-construccion-software.md)

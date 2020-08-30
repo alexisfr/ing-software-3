@@ -30,7 +30,7 @@ Detrás de escena, Docker Engine crea los puentes de Linux, las interfaces inter
 
 #### Que es docker compose?
 
-Si nuestro sistem distribuido esta compuesto de varios componentes corriendo con Docker, al momento de compilar, ejecutar y conectar los contenedores desde Dockerfiles separados definitivamente requiere mucho tiempo. Entonces, como solución a este problema, Docker Compose nos permite usar un archivo YAML para definir aplicaciones de múltiples contenedores. Es posible configurar tantos contenedores como queramos, cómo se deben construir y conectar, y dónde se deben almacenar los datos. Podemos ejecutar un solo comando para compilar, ejecutar y configurar todos los contenedores cuando el archivo YAML esté completo.
+Si nuestro sistem distribuido está compuesto de varios componentes corriendo con Docker, al momento de compilar, ejecutar y conectar los contenedores desde Dockerfiles separados definitivamente requiere mucho tiempo. Entonces, como solución a este problema, Docker Compose nos permite usar un archivo YAML para definir aplicaciones de múltiples contenedores. Es posible configurar tantos contenedores como queramos, cómo se deben construir y conectar, y dónde se deben almacenar los datos. Podemos ejecutar un solo comando para compilar, ejecutar y configurar todos los contenedores cuando el archivo YAML esté completo.
 
 
 ## 4- Desarrollo:
@@ -51,12 +51,12 @@ Si nuestro sistem distribuido esta compuesto de varios componentes corriendo con
   ```
   - Abrir un navegador y acceder a la URL: http://localhost:5000/
   - Verificar el estado de los contenedores y redes en Docker, describir:
-    - Cuales puertos están abiertos?
+    - ¿Cuáles puertos están abiertos?
     - Mostrar detalles de la red `mybridge` con Docker.
-    - Qué comandos utilizó?
+    - ¿Qué comandos utilizó?
 
-#### 2- Analisis del sistema 
-  - Siendo el código de la aplicacion web el siguiente:
+#### 2- Análisis del sistema 
+  - Siendo el código de la aplicación web el siguiente:
 ```python
 import os
 
@@ -79,7 +79,7 @@ def hello():
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True, port=bind_port)
 ```
-  - Explicar como funciona el sistema
+  - Explicar cómo funciona el sistema
   - ¿Para qué se sirven y porque están los parámetros `-e` en el segundo Docker run del ejercicio 1?
   - ¿Qué pasa si ejecuta `docker rm -f web` y vuelve a correr ` docker run -d --net mybridge -e REDIS_HOST=db -e REDIS_PORT=6379 -p 5000:5000 --name web alexisfr/flask-app:latest` ?
   - ¿Qué occure en la página web cuando borro el contenedor de Redis con `docker rm -f db`?
