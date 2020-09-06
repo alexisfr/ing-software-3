@@ -278,7 +278,7 @@ cd test
 make run
 ```
 - Acceder a la aplicación en: http://localhost:5000/
-- Explicar que hace un atook como cookiecutter, make y pip.
+- Explicar que hace una tool como cookiecutter, make y pip.
 
 #### 10- Build tools para otros lenguajes
 - Hacer una lista de herramientas de build (una o varias) para distintos lenguajes, por ejemplo (Rust -> cargo)
