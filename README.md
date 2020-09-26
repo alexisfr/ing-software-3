@@ -15,3 +15,5 @@ Repositorio Git de Ingeniería del Software 3 - Año 2020
   * [Trabajo Práctico 5 - Herramientas de construcción de software](trabajos/05-herramientas-construccion-software.md)
 
   * [Trabajo Práctico 6 - Construcción de Imágenes de Docker](trabajos/06-construccion-imagenes-docker.md)
+
+ * [Trabajo Práctico 7 - Servidor de Build](trabajos/07-servidor-build.md)  
