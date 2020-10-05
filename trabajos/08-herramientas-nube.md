@@ -1,4 +1,4 @@
-## Trabajo Práctico 7 - Herramientas de construcción en la nube
+## Trabajo Práctico 8 - Herramientas de construcción de software en la nube
 ### 1- Objetivos de Aprendizaje
  - Adquirir conocimientos acerca de las herramientas de integración continua en la nube.
  - Configurar este tipo de herramientas.
