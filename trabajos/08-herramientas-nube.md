@@ -69,4 +69,4 @@ mvn clean package
   - Como resultado de este ejercicio subir el archivo .gitlab-ci.yml a la carpeta **spring-boot**
 
 #### 7- Conclusiones.
-  - Hacer una breve descripción comparativa entre AppVeyor, CircleCI y TravisCI
+  - Hacer una breve descripción comparativa entre las distintas herramientas evaluadas.
