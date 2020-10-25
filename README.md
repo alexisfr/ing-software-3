@@ -22,3 +22,4 @@ Repositorio Git de Ingeniería del Software 3 - Año 2020
 
   * [Trabajo Práctico 9 - Pruebas de Unidad](trabajos/09-pruebas-unidad.md)  
 
+  * [Trabajo Práctico 10 - Pruebas de Integración](trabajos/10-pruebas-integracion.md)  
