@@ -28,15 +28,18 @@ Este trabajo práctico corresponde a la unidad Nº: 6 (Libro Ingeniería de Soft
 #### 2- Correr Análisis de código
   - Una vez creado el proyecto, se debe elegir la opción de análisis manual
   - Seleccionar Maven.
-  - Correr el comando generado en la raíz del repositorio clonado locamente, hay que agregar la opción **-Dmaven.test.failure.ignore=true** al final del comando, algo similar a esto:
+  - Correr el siguente comando en la raíz del repositorio clonado, hay que agregar la opción `-Dmaven.test.failure.ignore=true` y/o `-Dsonar.scanner.force-deprecated-java-version=true` (para java 1.8) final del comando, algo similar a esto:
 ```bash
 mvn sonar:sonar \
   -Dsonar.projectKey=alexisfr_java-projects \
   -Dsonar.organization=alexisfr-github \
   -Dsonar.host.url=https://sonarcloud.io \
-  -Dsonar.login=XXX \
-  -Dmaven.test.failure.ignore=true
+  -Dsonar.login=<SONAR_TOKEN> \
+  -Dmaven.test.failure.ignore=true \ 
+  -Dsonar.scanner.force-deprecated-java-version=true
 ```
+  - El proyecto y la organización se pueden obtner de la página de opciones de Maven.
+  - Donde **<SONAR_TOKEN>** se puede obtener de la página donde aparecen las opciones de Maven.
   - Esta ejecución puede tomar varios minutos.
   - Guardar este comando, que luego será utilizado.
 
@@ -64,7 +67,7 @@ mvn sonar:sonar \
   - Volver a correr el análisis de código con el comando ejecutado en el ejercicio 2.
   - Comprobar que la en esta clase no se reporta más dicho problema.
 
-#### 8- Analizar código de la applicación Payroll
+#### 8- Analizar código de la applicación Spring Boot
   - Utilizando los pasos de punto 2 correr el análisis para el proyecto **./proyectos/spring-boot**
   - Analizar resultados
 
