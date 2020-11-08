@@ -24,4 +24,6 @@ Repositorio Git de Ingeniería del Software 3 - Año 2020
 
   * [Trabajo Práctico 10 - Pruebas de Integración](trabajos/10-pruebas-integracion.md)  
 
-  * [Trabajo Práctico 11 - Métricas de código](trabajos/11-metricas-codigo.md)  
+  * [Trabajo Práctico 11 - Métricas de código](trabajos/11-metricas-codigo.md)
+
+  * [Trabajo Práctico 12 - Despliegue de aplicaciones](trabajos/12-despliegue-aplicaciones.md)  
