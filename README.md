@@ -1,6 +1,6 @@
 # Ingeniería del Software 3 - Práctico
 
-Repositorio Git de Ingeniería del Software 3 - Año 2020
+Repositorio Git de Ingeniería de Software 3
 
 # Tabla de contenidos
 
