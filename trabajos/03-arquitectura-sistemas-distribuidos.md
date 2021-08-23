@@ -99,7 +99,8 @@ if __name__ == "__main__":
   sudo pip install docker-compose
   ```
   - Crear el siguente archivo `docker-compose.yaml` en un directorio de trabajo:
-  ```yaml
+ 
+ ```yaml
 version: '3.6'
 services:
   app:
@@ -116,8 +117,8 @@ services:
     volumes:
       - redis_data:/data
 volumes:
-  redis_data: 
-  ```
+  redis_data:
+```
   - Ejecutar `docker-compose up -d`
   - Acceder a la url http://localhost:5000/
   - Ejecutar `docker ps`, `docker network ls` y `docker volume ls`
