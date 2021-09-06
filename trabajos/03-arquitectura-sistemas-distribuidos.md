@@ -151,7 +151,7 @@ docker-compose -f docker-compose-javaworker.yml up -d
 - Explicar como está configurado el sistema, puertos, volumenes componenetes involucrados, utilizar el Docker compose como guía.
 
 #### 5- Análisis detallado
-- Exponer más puertos urtos para ver la configuración de Redis, y las tablas de PostgreSQL con alguna IDE como dbeaver.
+- Exponer más puertos para ver la configuración de Redis, y las tablas de PostgreSQL con alguna IDE como dbeaver.
 - Revisar el código de la aplicación Python `example-voting-app\vote\app.py` para ver como envía votos a Redis.
 - Revisar el código del worker `example-voting-app\worker\src\main\java\worker\Worker.java` para entender como procesa los datos.
 - Revisar el código de la aplicacion que muestra los resultados `example-voting-app\result\server.js` para entender como muestra los valores.
