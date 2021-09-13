@@ -235,22 +235,14 @@ java -jar target\ejemplo-uber-jar.jar
 
 - Instalar Nodejs: https://nodejs.org/en/
 
-- Instalar el componente para generar aplicaciones Express
-
-```bash
-npm install express-generator -g
-```
-
 - Crear una nueva aplicación
 ```bash
-express --view=ejs hola-mundo
+npx create-react-app my-app
 ```
 
 - Ejecutar la aplicación
-
 ```bash
-cd hola-mundo
-npm install
+cd my-app
 npm start
 ```
 
