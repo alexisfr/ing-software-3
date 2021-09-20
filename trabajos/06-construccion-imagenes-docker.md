@@ -24,7 +24,7 @@ Este trabajo práctico corresponde a la unidad Nº: 3
      - ENTRYPOINT
 
 #### 2- Generar imagen de docker
-   - Clonar/Actualizar el repositorio de https://github.com/alexisfr/ing-soft-3-2020 
+   - Clonar/Actualizar el repositorio de https://github.com/alexisfr/ing-software-3
    - El código se encuentra en la carpeta `./proyectos/spring-boot`
    - Se puede copiar al repositorio personal en una carpeta `trabajo-practico-06/spring-boot`
    - Compilar la salida con:
