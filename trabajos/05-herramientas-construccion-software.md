@@ -179,6 +179,13 @@ java -cp target\ejemplo-uber-jar-1.0-SNAPSHOT.jar ar.edu.ucc.App
 
 - Sacar conclusiones y analizar posibles soluciones
 
+- Ahora, cjecutar la clase con el siguiente comando (en windows reemplazar `$HOME` por `%USERPROFILE%`, y separar por `;` en lugar de `:`)
+```bash
+ java -cp target/ejemplo-uber-jar-1.0-SNAPSHOT.jar:$HOME/.m2/repository/org/slf4j/slf4j-api/1.7.22/slf4j-api-1.7.22.jar:$HOME/.m2/repository/ch/qos/logback/logback-classic/1.2.1/logback-classic-1.2.1.jar:/$HOME/.m2/repository/ch/qos/logback/logback-core/1.2.1/logback-core-1.2.1.jar ar.edu.ucc.App
+```
+
+- Verificar que ahora resueltos los classpath la aplicación muestra el mensaje correcto
+
 - Implementar la opción de uber-jar: https://maven.apache.org/plugins/maven-shade-plugin/
 
 ```xml
