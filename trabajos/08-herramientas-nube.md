@@ -10,7 +10,7 @@ Este trabajo práctico corresponde a la unidad Nº: 3 (Libro Continuous Delivery
 ### 3- Consignas a desarrollar en el trabajo práctico:
  - Para una mejor evaluación del trabajo práctico, incluir capturas de pantalla de los pasos donde considere necesario.
  - En este caso existen varias herramientas con funcionalidades similares en la nube:
-   - [AppVeyor](https://www.appveyor.com/)   
+   - [GitHub Actions](https://github.com/actions)
    - [CircleCI](https://circleci.com/)
    - [Travis CI](https://travis-ci.com/)
    - [Codefresh](https://codefresh.io/)
@@ -22,51 +22,77 @@ Este trabajo práctico corresponde a la unidad Nº: 3 (Libro Continuous Delivery
   - Listar los pros y contras de este tipo de herramientas
   - Sacar conclusiones
 
-#### 2- Configurando AppVeyor
-  - Crear una cuenta en AppVeyor, se puede utilizar el usuario de GitHub
-  - Configurar un proyecto utilizando un repositorio que contenga el código del proyecto Maven **spring-boot**.
-  - Ir a la opción **SETTINGS**
-  - Dejar el entorno por defecto (Visual Studio 2015)
-  - En la opción **Build** configurar un script de línea de comando (CMD), para que genere los artefactos. Es posible que tenga que cambiar de directorio para generación:
-```
-cd <lugar donde está el pom.xml>
-mvn clean package
-```
-  - En la opción **Artifacts** especificar la ruta relativa para capturar los jar files de salida.
-  - En la opción **Tests** agregar el siguiente código Powershell
-  ```powershell
-      $url = "https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)"
-      $wc = New-Object 'System.Net.WebClient'
-      $dirs = Get-ChildItem -Filter surefire-reports -Recurse
-      ForEach ($dir in $dirs)
-      {
-        $files = Get-ChildItem -Path $dir.FullName -Filter TEST-*.xml
-        ForEach ($file in $files)
-        {
-          $wc.UploadFile($url, (Resolve-Path $file.FullName))
-        }
-      }
-  ```
-  - Verificar que el Job se ejecuta con nuevos commits en el repositorio configurado.
-  - Opcional: Agregar Badges al repositorio para mostrar estado actual del build en GitHub.
-  - Como resultado de este ejercicio, exportar el yaml generado y subirlo en **spring-boot/appveyor.yml**. Y mostrar capturas de pantalla con los artefactos y/o la historia de los builds ejecutados.
+#### 2- Configurando GitHub Actions
+  - Repetir el ejercicio 6 del trabajo práctico [trabajo práctico 7](07-servidor-build.md) para el proyecto **spring-boot**, pero utilizando GitHub Actions.
+  - En GitHub, en el repositorio donde se encuentra la aplicación **spring-boot**, ir a la opción **Actions** y crear un nuevo `workflow`.
+  - El nombre de archivo puede ser build.xml y tendrá un contenido similar al siguiente (el path donde se encuentra el código puede ser diferente):
 
-#### 3- Opcional: Configurando CircleCI
+```yaml
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    paths:
+    - 'proyectos/spring-boot/**'
+    branches: [ master ]
+  pull_request:
+    paths:
+    - 'proyectos/spring-boot/**'  
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Install Java JDK with maven
+      - name: Set up JDK 8
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+          cache: maven
+          
+      # Compile the application
+      - name: Build with Maven
+        run: |
+          cd proyectos/spring-boot/
+          mvn -B package --file pom.xml
+```
+  - Guardar el archivo (hacemos commit directamente en GitHub por ejemplo) y ejecutamos manualmente el pipeline.
+  - Explicar que realiza el pipeline anterior.
+
+#### 3- Utilizando nuestros proyectos con Docker
+  - Repetir el ejercicio 7 del trabajo práctico [trabajo práctico 7](07-servidor-build.md), pero utilizando GitHub Actions.
+  - Generar `secretos` y los `pasos` necesarios para subir la imagen a Docker Hub. [Referencia](https://github.com/actions/starter-workflows/blob/main/ci/docker-publish.yml)
+
+#### 4- Opcional: Configurando CircleCI
   - De manera similar al ejercicio 2, configurar un build job para el mismo proyecto, pero utilizando CircleCI
   - Para capturar artefactos, utilizar esta referencia: https://circleci.com/docs/2.0/artifacts/
   - Como resultado de este ejercicio, subir el config.yml a la carpeta **spring-boot**
 
-#### 4- Opcional: Configurando TravisCI
+#### 5- Opcional: Configurando TravisCI
   - Configurar el mismo proyecto, pero para TravisCI. No es necesario publicar los artefactos porque TravisCI no dispone de esta funcionalidad.
   - Como resultado de este ejercicio subir el archivo .travis.yml a la carpeta **spring-boot**
 
-#### 5- Opcional: Configurando Codefresh
+#### 6- Opcional: Configurando Codefresh
   - Configurar el mismo proyecto, pero para Codefresh. 
   - Como resultado de este ejercicio subir el archivo codefresh.yml a la carpeta **spring-boot**
 
-#### 6- Opcional: Configurando Gitlab
+#### 7- Opcional: Configurando Gitlab
   - Configurar el mismo proyecto, pero para Gitlab. 
   - Como resultado de este ejercicio subir el archivo .gitlab-ci.yml a la carpeta **spring-boot**
-
-#### 7- Conclusiones.
-  - Hacer una breve descripción comparativa entre las distintas herramientas evaluadas.

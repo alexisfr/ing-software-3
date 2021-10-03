@@ -57,8 +57,8 @@ cat ~/jenkins/secrets/initialAdminPassword
  - Se aconseja perisistir la variable **JENKINS_HOME**, ya sea por ejemplo en .bashrc o en las variables de entorno de Windows.
 #### 2- Conceptos generales
   - Junto al Jefe de trabajos prácticos:
-    - Explicamos los diferentes componentes que vemos en la página principal
-    - Analizamos las opciones de administración de Jenkins
+  - Explicamos los diferentes componentes que vemos en la página principal
+  - Analizamos las opciones de administración de Jenkins
 
 #### 3- Instalando Plugins y configurando herramientas
   - En Administrar Jenkins vamos a la sección de Administrar Plugins
@@ -82,9 +82,9 @@ cat ~/jenkins/secrets/initialAdminPassword
 
 #### 6- Utilizando nuestros proyectos
   - Utilizando lo aprendido en el ejercicio 5
-    - Crear un Job que construya el proyecto **spring-boot** del [trabajo práctico 6](06-construccion-imagenes-docker.md).
-    - Obtener el código desde el repositorio de cada alumno (se puede crear un repositorio nuevo en github que contenga solamente el proyecto maven).
-    - Generar y publicar los artefactos que se producen.
+  - Crear un Job que construya el proyecto **spring-boot** del [trabajo práctico 6](06-construccion-imagenes-docker.md).
+  - Obtener el código desde el repositorio de cada alumno (se puede crear un repositorio nuevo en github que contenga solamente el proyecto maven).
+  - Generar y publicar los artefactos que se producen.
   - Como resultado de este ejercicio proveer el script en un archivo **spring-boot/Jenkinsfile**
 
 #### 7- Utilizando nuestros proyectos con Docker
